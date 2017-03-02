@@ -6,21 +6,14 @@
 # We make no guarantees that this code is fit for any purpose.
 # Visit http://www.pragmaticprogrammer.com/titles/rails5 for more book information.
 #---
-class Cart < ApplicationRecord
-  has_many :line_items, dependent: :destroy
+module CurrentCart
 
-  def add_product(product)
-    current_item = line_items.find_by(product_id: product.id)
-    if current_item
-      current_item.quantity += 1
-    else
-      current_item = line_items.build(product_id: product.id)
+  private
+    def set_cart 
+      @cart = Cart.find(session[:cart_id])
+    rescue ActiveRecord::RecordNotFound
+      @cart = Cart.create
+      session[:cart_id] = @cart.id
     end
-    current_item
-  end
-  
-  def total_price
-    line_items.to_a.sum { |item| item.total_price }
-  end
-
 end
+

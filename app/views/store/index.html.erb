@@ -1,9 +1,8 @@
-<h1>Store#index</h1>
-<p>Find me in app/views/store/index.html.erb</p>
 
 <p id="notice"><%= notice %></p>
 
-<h1>Products</h1>
+<h1>Welcome to Our Store!</h1>
+<h3>Products:</h3>
 
 <table class="table table-responsive">
   <thead>
@@ -23,8 +22,7 @@
         <td><%= (strip_tags(product.description)) %></td>
         <td><%= image_tag(product.image_url) %></td>
         <td><%= "$%.2f" %(product.price) %></td>
-        <td><%= link_to 'Show', product , class:"btn btn-xs btn-default" %></td>
-        <td><%= button_to 'Add to Cart', line_items_path(product_id: product) %></td>
+        <td><%= button_to 'Add to Cart', line_items_path(product_id: product) , class:"btn btn-xs btn-primary" %></td>
       </tr>
     <% end %>
   </tbody>
