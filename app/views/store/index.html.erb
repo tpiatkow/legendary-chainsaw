@@ -1,15 +1,15 @@
 
 <p id="notice"><%= notice %></p>
-
-<h1>Welcome to Our Store!</h1>
+<p>
+<h1>Welcome to the Dog Shop!</h1>
 <h3>Products:</h3>
 
 <table class="table table-responsive">
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Description</th>
+      <th>Toy:</th>
       <th>Image url</th>
+      <th>Description</th>
       <th>Price</th>
       <th colspan="3"></th>
     </tr>
@@ -18,10 +18,10 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= product.title %></td>
-        <td><%= (strip_tags(product.description)) %></td>
+        <td><h4><%= product.title %></td></h4>
         <td><%= image_tag(product.image_url) %></td>
-        <td><%= "$%.2f" %(product.price) %></td>
+        <td><%= (strip_tags(product.description)) %></td>
+        <td><h4><%= "$%.2f" %(product.price) %></td></h4>
         <td><%= button_to 'Add to Cart', line_items_path(product_id: product) , class:"btn btn-xs btn-primary" %></td>
       </tr>
     <% end %>

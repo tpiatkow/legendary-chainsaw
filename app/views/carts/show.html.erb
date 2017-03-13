@@ -13,7 +13,7 @@
    <% @cart.line_items.each do |item| %>
     <tr>
     <td><%= item.quantity %> &times; </td>
-    <td><%= item.product.title %></td>
+     <td><%= item.product.title %></td>
     <td><%= "$%.2f" %(item.total_price) %></td>
     </tr>
   <% end %>

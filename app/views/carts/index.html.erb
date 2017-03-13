@@ -16,8 +16,8 @@
         <td><%= cart.id %></td>
         <td><%= link_to 'Show', cart , class:"btn btn-xs btn-default" %>
         <%= link_to 'Edit', edit_cart_path(cart) , class:"btn btn-xs btn-default" %>
-        <%= link_to 'Destroy', cart, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-xs btn-danger" %></td>
-      </tr>
+        <td><%= link_to 'Destroy', cart, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-xs btn-danger" %></td>
+        </tr>
     <% end %>
   </tbody>
 </table>
