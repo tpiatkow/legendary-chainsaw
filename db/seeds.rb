@@ -76,7 +76,7 @@ Product.create(title: 'The Dognald',
     perfect for tough debates. And, you'll never hear this plush guy squeak. Squeaking is for wimps. When 
     chewed, The Dognald grunts. Like a winner.
   </p>},
-  image_url: 'donaldtoy.jpeg',
+  image_url: 'donaldtoy.jpg',
   price: 15.00)
   
 Product.create(title: 'Polly Pig Dog Toy',
@@ -90,5 +90,5 @@ Product.create(title: 'Polly Pig Dog Toy',
     clean machine washable dog toy Floats in water Easy to toss and great for indoors Soft edges will not hurt
     gums For dogs of all sizes Measures 14 x 8 inches.
     </p>},
-  image_url: 'pigtoy.jpeg',
+  image_url: 'pigtoy.jpg',
   price: 16.00)
