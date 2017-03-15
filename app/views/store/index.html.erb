@@ -1,20 +1,19 @@
 
 <p id="notice"><%= notice %></p>
 <p>
-<h1>Welcome to the Dog Shop!</h1>
-<h3>Products:</h3>
-
-<table class="table table-responsive">
+<h1><center><%= image_tag 'pawprint2.png', alt: 'Paw Print' %>
+Welcome to the Dog Shop!<%= image_tag 'pawprint2.png', alt: 'Paw Print' %></h1></center><p>
+<table class="table table-hover">
   <thead>
     <tr>
-      <th>Toy:</th>
-      <th>Image url</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th colspan="3"></th>
+      <th bgcolor="#ffa366";> Toy: </th>
+      <th bgcolor="#ffa366";>Picture of Toy:</th>
+      <th bgcolor="#ffa366";>Description:</th>
+      <th bgcolor="#ffa366";>Price:</th>
+      <th bgcolor="#ffa366";>   </th>
     </tr>
   </thead>
-
+  <tbody>
   <tbody>
     <% @products.each do |product| %>
       <tr>
@@ -22,11 +21,10 @@
         <td><%= image_tag(product.image_url) %></td>
         <td><%= (strip_tags(product.description)) %></td>
         <td><h4><%= "$%.2f" %(product.price) %></td></h4>
-        <td><%= button_to 'Add to Cart', line_items_path(product_id: product) , class:"btn btn-xs btn-primary" %></td>
+        <td><%= button_to 'Add to Cart', line_items_path(product_id: product) , class:"btn btn-xs btn-default" %></td>
       </tr>
     <% end %>
   </tbody>
-</table>
-
-<br>
+    </tr>
+    
 
